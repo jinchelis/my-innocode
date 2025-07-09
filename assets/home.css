@@ -261,8 +261,13 @@ h2 {
   text-decoration: none;
 }
 
+.footer-column ul li a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
 .footer-column ul li a:hover {
-  text-decoration: underline;
+  transform: scale(1.05);
 }
 
 .social-links i {
