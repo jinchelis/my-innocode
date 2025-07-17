@@ -6,6 +6,21 @@
     <title>Ftravel - Đặt tour du lịch</title>
     <link rel="stylesheet" href="assets/global.css" />
     <link rel="stylesheet" href="assets/home.css" />
+    <!-- Flatpickr -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script>
+      flatpickr("#departureDate", {
+        dateFormat: "d-m-Y",
+        minDate: "today",
+        locale: "vn", // Có thể thêm file locale nếu cần
+      });
+    </script>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -58,10 +73,22 @@
     <!-- Hero banner -->
     <section class="hero">
       <div class="hero-content">
-        <h1>Discover and book things to do around the world</h1>
-        <div class="search-box">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" placeholder="Tìm địa điểm và hoạt động..." />
+        <h1>Khám phá và trải nghiệm mọi nơi trên thế giới một cách dễ dàng!</h1>
+        <div class="search-bar">
+          <div class="search-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="Bạn muốn đi đâu?" />
+          </div>
+
+          <div class="search-item">
+            <i class="fa-solid fa-calendar-days"></i>
+            <input
+              type="text"
+              id="departureDate"
+              placeholder="Ngày khởi hành"
+            />
+          </div>
+
           <button class="btn btn-orange search-btn">Tìm kiếm</button>
         </div>
       </div>

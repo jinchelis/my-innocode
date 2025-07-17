@@ -30,3 +30,12 @@ document.getElementById("profileBtn").addEventListener("click", function (e) {
   dropdown.style.display =
     dropdown.style.display === "block" ? "none" : "block";
 });
+
+// Gắn sau khi DOM đã load
+document.addEventListener("DOMContentLoaded", function () {
+  flatpickr("#departureDate", {
+    dateFormat: "d-m-Y",
+    minDate: "today",
+    locale: "vn",
+  });
+});
